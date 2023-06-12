@@ -1,3 +1,8 @@
+
+<p *ngIf="blueClass"> The button is blue </p>
+<button (click)="blueClass=!blueClass" [ngClass]="{blue:blueClass}"
+[ngStyle]="{ 'font-size.px':fontSize }">Change</button>
+<hr>
 <p>Hello {{name.toUpperCase()}} </p>
 <p>
   Hello {{getName() | titlecase}}
@@ -12,7 +17,10 @@
 <p>{{details | json}}</p>
 
 <input [value]="imageURL" (keyup)="changeImage($event)">
-<app-post [img]="imageURL" (imageSelected)="logImage($event)">
-  <p>I'm a new paragraph added for in the app component</p>
+<app-post *ngFor="let imgs of images;let i=index" [img]="imgs" (imageSelected)="logImage($event)">
+  <p>{{ i+1}} Image</p>
 </app-post>
 
+
+
+<!--Structural directives must be applied to ng-template element-->
