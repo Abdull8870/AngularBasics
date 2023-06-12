@@ -11,6 +11,12 @@ export class AppComponent{
   name='Abdul'
   imageURL='https://picsum.photos/id/237/200/300'
   currentDate= new Date();
+  cost=55;
+  tempreature= 23.3344;
+  details={
+    name:['kohli','Rohit'],
+    score:['43','49']
+  }
 
   getName(){
     return this.name.toLowerCase();

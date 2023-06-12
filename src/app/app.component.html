@@ -7,6 +7,9 @@
 </div>
 
 <p> {{10+90}} </p>
+<p>{{ cost | currency:'INR'}}</p>>
+<p>{{tempreature | number:'1.0'}}</p>
+<p>{{details | json}}</p>
 
 <input [value]="imageURL" (keyup)="changeImage($event)">
 <app-post [img]="imageURL" (imageSelected)="logImage($event)">
